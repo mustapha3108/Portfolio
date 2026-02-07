@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "forest";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: /*oklch(22% 0.015 260)*/ oklch(12% 0.02 265);
+  --color-base-200: oklch(18.522% 0.007 17.911);
+  --color-base-300: oklch(16.203% 0.007 17.911);
+  --color-base-content: oklch(92% 0.006 255) /*oklch(83.768% 0.001 17.911)*/;
+  --color-primary: #9BBCE0;
+  --color-primary-content: oklch(0% 0 0);
+  --color-secondary: oklch(86% 0.005 56.366);
+  --color-secondary-content: oklch(13.955% 0.027 168.327);
+  --color-accent: oklch(62% 0.14 295);
+  --color-accent-content: oklch(14% 0.004 49.25);
+  --color-neutral: oklch(27% 0.033 256.848);
+  --color-neutral-content: oklch(86.139% 0.007 171.364);
+  --color-info: oklch(72.06% 0.191 231.6);
+  --color-info-content: oklch(0% 0 0);
+  --color-success: oklch(64.8% 0.15 160);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(84.71% 0.199 83.87);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71.76% 0.221 22.18);
+  --color-error-content: oklch(0% 0 0);
+  --radius-selector: 0.5rem;
+  --radius-field: 2rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+*, body, html {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHZpZXdCb3g9IjAgMCAxIDEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGwtb3BhY2l0eT0iMCIvPjwvc3ZnPg==') 0 0, auto !important;
+}
+body{
+  font-family: "Montserrat", sans-serif;
+}
+.satisfyfont {
+  font-family: "Kalam", cursive;
+}
+
+@keyframes underline {
+  0% {
+    background-size: 0% 3px;
+  }
+  100% {
+    background-size: 100% 3px;
+  }
+}
+.underline-animation {
+  background-image: linear-gradient(to right, #9BBCE0, oklch(62% 0.14 295) /*#005f8f, #191970*/);
+  background-repeat: no-repeat;
+  /*background-position: 0 100%; /* stick to bottom */
+  background-position: 0 calc(100% - 2px);
+  background-size: 0% 3px;     /* underline thickness */
+  animation: underline 3s ease 2s forwards;
+}
+
+/*Animista classes*/
+.scale-up-center{animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) 2s both}
+@keyframes scale-up-center{0%{transform:scale(.5)}100%{transform:scale(1)}}
+
+.fade-in-bottom{animation:fade-in-bottom .6s cubic-bezier(.39,.575,.565,1.000) 2s both}
+@keyframes fade-in-bottom{0%{transform:translateY(50px);opacity:0}100%{transform:translateY(0);opacity:1}}
+
+.tracking-in-expand{animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) 0.5s both}
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+.text-shadow-pop-tl{animation:text-shadow-pop-tl .6s 2s both}
+@keyframes text-shadow-pop-tl{0%{text-shadow:0 0 #555,0 0 #555,0 0 #555,0 0 #555,0 0 #555,0 0 #555,0 0 #555,0 0 #555;transform:translateX(0) translateY(0)}100%{text-shadow:-1px -1px #555,-2px -2px #555,-3px -3px #555,-4px -4px #555,-5px -5px #555,-6px -6px #555,-7px -7px #555,-8px -8px #555;transform:translateX(8px) translateY(8px)}}
+
+
+
