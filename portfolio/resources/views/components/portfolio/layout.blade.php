@@ -17,7 +17,7 @@
             <div class="absolute inset-0 bg-[oklch(12%_0.02_265/0.65)]"></div>
         </div>
 
-        <div class="w-[80%] md:w-[70%] mx-auto mt-12 md:mt-8 relative z-10">
+        <div class="w-[90%] lg:w-[70%] mx-auto mt-6 lg:mt-8 relative z-10">
             {{ $slot }}
         </div>
 

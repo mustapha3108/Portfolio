@@ -49,7 +49,7 @@ const options = {
     links: {
       enable: true,
       distance: 120,
-      opacity: 0.3,
+      opacity: 0.8,
       width: 1,
       color: "#6c8cff"
     }
